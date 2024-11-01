@@ -4,11 +4,8 @@ kind: Kustomization
 resources:
   -  git@github.com:ClubCedille/k8s-base.git/bases/cert-manager/cert-manager-app.yaml
 
-patches:
-  patch: |-
-    - op: replace
-      path: /spec/destination/server
-      value: https://kubernetes.default.svc
-    
-    
-    
+  patches:
+    patch: |-
+      - op: replace
+        path: /spec/destination/server
+        value: https://kubernetes.default.svc
